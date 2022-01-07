@@ -39,7 +39,7 @@ public class DemoRunClass {
 		driver.manage().window().maximize();
 		driver.get("https://alpha4a-test.sdms2.com/Default.aspx");
 		System.out.println(driver.getTitle());
-		driver.quit();
+		driver.close();
 	}
 	
 }
