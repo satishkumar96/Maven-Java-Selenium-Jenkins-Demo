@@ -4,6 +4,21 @@
 	<test thread-count="5" name="ChromeTest">
 		<classes>
 			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="Chrome"></parameter>
 		</classes>
 	</test> <!--Chrome Test -->
+	
+	<test name="FirefoxTest">
+		<classes>
+			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="Firefox"></parameter>
+		</classes>
+	</test> <!-- Firefox Test -->
+	
+	<test name="EdgeTest">
+		<classes>
+			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="Edge"></parameter>
+		</classes>
+	</test> <!-- Edge Test -->
 </suite> <!-- Suite -->
