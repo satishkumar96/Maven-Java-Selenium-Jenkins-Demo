@@ -25,7 +25,8 @@ public class DemoRunClass {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
-		else if (browserName.equalsIgnoreCase("firefox")) {
+		else if (browserName.equalsIgnoreCase("firefox")) 
+		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
