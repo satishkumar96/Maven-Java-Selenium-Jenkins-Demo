@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test">
+	<test thread-count="5" name="ChromeTest">
 		<classes>
 			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="Chrome"></parameter>
 		</classes>
 	</test> <!-- Test -->
+	<test name="FirefoxTest">
+		<classes>
+			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="Firefox"></parameter>
+		</classes>
+	</test>
+	<test name="EdgeTest">
+		<classes>
+			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="Edge"></parameter>
+		</classes>
+	</test>
 </suite> <!-- Suite -->
