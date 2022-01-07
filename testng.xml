@@ -7,12 +7,14 @@
 			<parameter name="Browser" value="Chrome"></parameter>
 		</classes>
 	</test> <!--Chrome Test -->
+	
 	<test name="FirefoxTest">
 		<classes>
 			<class name="testclass.DemoRunClass"></class>
 			<parameter name="Browser" value="Firefox"></parameter>
 		</classes>
 	</test> <!-- Firefox Test -->
+	
 	<test name="EdgeTest">
 		<classes>
 			<class name="testclass.DemoRunClass"></class>
