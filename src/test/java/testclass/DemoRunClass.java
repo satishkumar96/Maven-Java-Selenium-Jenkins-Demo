@@ -30,7 +30,8 @@ public class DemoRunClass {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
-		else if (browserName.equalsIgnoreCase("edge")) {
+		else if (browserName.equalsIgnoreCase("edge")) 
+		{
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
