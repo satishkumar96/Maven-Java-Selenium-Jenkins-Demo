@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="77680" started-at="2022-01-07T09:31:02 IST" finished-at="2022-01-07T09:32:20 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="77680" started-at="2022-01-07T09:31:02 IST" finished-at="2022-01-07T09:32:20 IST">
+      <class name="testclass.DemoRunClass">
+        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@4d41cee]" name="OpenBrowser" duration-ms="77617" started-at="2022-01-07T09:31:02 IST" finished-at="2022-01-07T09:32:20 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenBrowser -->
+      </class> <!-- testclass.DemoRunClass -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
