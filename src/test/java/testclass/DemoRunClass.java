@@ -20,11 +20,13 @@ public class DemoRunClass {
 		System.out.println("Browser Value is: "+browserName);
 		WebDriver driver = null;
 		
-		if(browserName.equalsIgnoreCase("chrome")) {
+		if(browserName.equalsIgnoreCase("chrome")) 
+		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
-		else if (browserName.equalsIgnoreCase("firefox")) {
+		else if (browserName.equalsIgnoreCase("firefox")) 
+		{
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
