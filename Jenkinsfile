@@ -1,10 +1,5 @@
 pipeline {
     agent any
-  
-    parameters {
-        	choice(name: 'Browser', choices: [ 'Chrome','Firefox','Edge' ], description: 'Please Select Any Browser')
-    }
-    
     
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
@@ -26,29 +21,10 @@ pipeline {
         stage('Test')
         {
 
-			when {
-			    expression {
-			       params.Browser == "Chrome" 
-			    }
-			}
-
             steps{
                 // To run Maven on a Windows agent, use
-                bat 'mvn clean verify -DBrowser=chrome'
+                bat 'mvn clean verify'
             }
-
-			when {
-			    expression {
-			       params.Browser == "Firefox" 
-			    }
-			}
-
-            steps{
-                // To run Maven on a Windows agent, use
-                bat 'mvn clean verify -DBrowser=firefox'
-            }
-			
-			            
 
             post {
                 
