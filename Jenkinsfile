@@ -1,6 +1,11 @@
 pipeline {
     agent any
   
+    parameters {
+        	choice(name: 'Browser', choices: [ 'Chrome','Firefox','Edge' ], description: 'Please Select Any Browser')
+    }
+    
+    
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "MAVEN_HOME"
@@ -20,10 +25,30 @@ pipeline {
     
         stage('Test')
         {
+
+			when {
+			    expression {
+			       params.Browser == "Chrome" 
+			    }
+			}
+
             steps{
                 // To run Maven on a Windows agent, use
-                bat 'mvn clean verify'
+                bat 'mvn clean verify -DBrowser=chrome'
             }
+
+			when {
+			    expression {
+			       params.Browser == "Firefox" 
+			    }
+			}
+
+            steps{
+                // To run Maven on a Windows agent, use
+                bat 'mvn clean verify -DBrowser=firefox'
+            }
+			
+			            
 
             post {
                 
@@ -41,7 +66,7 @@ pipeline {
                 
                 failure
                 {
-                    emailext attachLog: true, 
+                      emailext attachLog: true, 
                       attachmentsPattern: 'target/surefire-reports/emailable-report.html', 
                       body: '''Hello Everybody,
 
@@ -58,11 +83,10 @@ pipeline {
                 {
                     emailext attachLog: true, 
                       attachmentsPattern: 'target/surefire-reports/emailable-report.html', 
-                      body: '''The automated test execution of PSC Smoke Test Cases is completed. Please find the test report in the below FTP folder,
-                    PSC Automation Testing Report - Beta.
+                      body: '''The automated test execution of PSC Smoke Test Cases is completed. Please find the test report in the below FTP folder, PSC Automation Testing Report - Beta.
                     
-                    Regards,
-                    QA Team''', 
+                    	Regards,
+                    	QA Team''', 
                       subject: '[$BUILD_STATUS] - $PROJECT_NAME - Build # $BUILD_NUMBER ($BUILD_ID)', 
                       to: 'automationwithsatish@gmail.com'
                 }
