@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-07T10:57:34 IST" name="Suite" finished-at="2022-01-07T10:59:19 IST" duration-ms="104096">
+  <suite name="Suite" duration-ms="113109" started-at="2022-01-10T11:32:33 IST" finished-at="2022-01-10T11:34:26 IST">
     <groups>
     </groups>
-    <test started-at="2022-01-07T10:57:34 IST" name="ChromeTest" finished-at="2022-01-07T10:57:54 IST" duration-ms="19300">
+    <test name="BrowserTest" duration-ms="113109" started-at="2022-01-10T11:32:33 IST" finished-at="2022-01-10T11:34:26 IST">
       <class name="testclass.DemoRunClass">
-        <test-method signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@1e6454ec]" started-at="2022-01-07T10:57:35 IST" name="OpenBrowser" finished-at="2022-01-07T10:57:54 IST" duration-ms="19212" status="PASS">
+        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@2833cc44]" name="OpenBrowser" duration-ms="112880" started-at="2022-01-10T11:32:33 IST" finished-at="2022-01-10T11:34:26 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
@@ -19,36 +19,6 @@
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
       </class> <!-- testclass.DemoRunClass -->
-    </test> <!-- ChromeTest -->
-    <test started-at="2022-01-07T10:57:54 IST" name="FirefoxTest" finished-at="2022-01-07T10:58:46 IST" duration-ms="52434">
-      <class name="testclass.DemoRunClass">
-        <test-method signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@7133da86]" started-at="2022-01-07T10:57:54 IST" name="OpenBrowser" finished-at="2022-01-07T10:58:46 IST" duration-ms="52433" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenBrowser -->
-      </class> <!-- testclass.DemoRunClass -->
-    </test> <!-- FirefoxTest -->
-    <test started-at="2022-01-07T10:58:46 IST" name="EdgeTest" finished-at="2022-01-07T10:59:19 IST" duration-ms="32287">
-      <class name="testclass.DemoRunClass">
-        <test-method signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@28f2a10f]" started-at="2022-01-07T10:58:46 IST" name="OpenBrowser" finished-at="2022-01-07T10:59:19 IST" duration-ms="32286" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenBrowser -->
-      </class> <!-- testclass.DemoRunClass -->
-    </test> <!-- EdgeTest -->
+    </test> <!-- BrowserTest -->
   </suite> <!-- Suite -->
 </testng-results>

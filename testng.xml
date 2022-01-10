@@ -4,6 +4,7 @@
 	<test thread-count="5" name="BrowserTest">
 		<classes>
 			<class name="testclass.DemoRunClass"></class>
+			<parameter name="Browser" value="chrome"></parameter>
 		</classes>
 	</test> <!--Test -->
 </suite> <!-- Suite -->
