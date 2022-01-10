@@ -26,8 +26,21 @@ pipeline {
             }
 
             post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
+                
+                always 
+                {
+                	publishHTML
+                	([
+                	allowMissing: false, 
+                	alwaysLinkToLastBuild: false, 
+                	keepAll: false, 
+                	reportDir: 'target/surefire-reports', 
+                	reportFiles: 'emailable-report.html', 
+                	reportName: 'HTML_Report', 
+                	reportTitles: ''
+                	])
+                }
+                
                 failure
                 {
                     emailext attachLog: true, 
