@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +105,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testclass.DemoRunClass" hash-for-method="OpenBrowser(chrome)">OpenBrowser(chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testclass.DemoRunClass" hash-for-method="OpenBrowser(firefox)">OpenBrowser(firefox)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testclass.DemoRunClass" hash-for-method="OpenBrowser(edge)">OpenBrowser(edge)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -133,6 +143,22 @@
                   <span class="parameters">(chrome)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OpenBrowser(firefox)">
+                  </a> <!-- OpenBrowser(firefox) -->
+                  <span class="method-name">OpenBrowser</span>
+                  <span class="parameters">(firefox)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="OpenBrowser(edge)">
+                  </a> <!-- OpenBrowser(edge) -->
+                  <span class="method-name">OpenBrowser</span>
+                  <span class="parameters">(edge)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -145,12 +171,24 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;BrowserTest&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;ChromeBrowserTest&quot;&gt;
     &lt;parameter name=&quot;Browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testclass.DemoRunClass&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- BrowserTest --&gt;
+  &lt;/test&gt; &lt;!-- ChromeBrowserTest --&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;FirefoxBrowserTest&quot;&gt;
+    &lt;parameter name=&quot;Browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testclass.DemoRunClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FirefoxBrowserTest --&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;EdgeBrowserTest&quot;&gt;
+    &lt;parameter name=&quot;Browser&quot; value=&quot;edge&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testclass.DemoRunClass&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- EdgeBrowserTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -162,7 +200,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">BrowserTest (1 class)</span>
+                <span class="test-name">ChromeBrowserTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FirefoxBrowserTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">EdgeBrowserTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,16 +232,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'OpenBrowser')
 data.setCell(0, 2, 'testclass.DemoRunClass')
-data.setCell(0, 3, 112880);
+data.setCell(0, 3, 134924);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'OpenBrowser')
+data.setCell(1, 2, 'testclass.DemoRunClass')
+data.setCell(1, 3, 101565);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'OpenBrowser')
+data.setCell(2, 2, 'testclass.DemoRunClass')
+data.setCell(2, 3, 96961);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -227,6 +279,14 @@ return data;
               <div class="test-method">
                 <span class="method-name">OpenBrowser(chrome)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">OpenBrowser(firefox)</span>
+                <span class="method-start">97075 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">OpenBrowser(edge)</span>
+                <span class="method-start">232035 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

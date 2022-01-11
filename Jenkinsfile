@@ -8,20 +8,27 @@ pipeline {
 
     stages 
   {
-        stage('Build') 
+        stage('Clean WorkSpace') 
       {
             steps 
         {
                 cleanWs()
+            }
+        }
+        stage('Clone the repo')
+        {
+            steps
+            {
                 // Get some code from a GitHub repository
                 git branch: 'main', url: 'https://github.com/satishkumar96/Maven-Java-Selenium-Jenkins-Demo.git'
             }
         }
     
-        stage('Test')
+        stage('Test and generate HTML_Report')
         {
 
-            steps{
+            steps
+            {
                 // To run Maven on a Windows agent, use
                 bat 'mvn clean verify'
             }
@@ -30,15 +37,23 @@ pipeline {
                 
                 always 
                 {
-                	publishHTML([
-                	allowMissing: false, 
-                	alwaysLinkToLastBuild: false, 
-                	keepAll: false, 
-                	reportDir: 'target/surefire-reports', 
-                	reportFiles: 'emailable-report.html', 
-                	reportName: 'HTML_Report', 
-                	reportTitles: ''])
+                    publishHTML([
+                    allowMissing: false, 
+                    alwaysLinkToLastBuild: false, 
+                    keepAll: false, 
+                    reportDir: 'target/surefire-reports', 
+                    reportFiles: 'emailable-report.html', 
+                    reportName: 'HTML_Report', 
+                    reportTitles: ''])
                 }
+                
+
+        }
+        stage('Email BUILD_STATUS')
+        {
+
+            post 
+            {
                 
                 failure
                 {
