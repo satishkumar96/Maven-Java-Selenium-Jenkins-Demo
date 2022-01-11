@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="333657" started-at="2022-01-11T12:52:29 IST" finished-at="2022-01-11T12:58:03 IST">
+  <suite name="Suite" duration-ms="233760" started-at="2022-01-11T14:39:00 IST" finished-at="2022-01-11T14:42:54 IST">
     <groups>
     </groups>
-    <test name="ChromeBrowserTest" duration-ms="97033" started-at="2022-01-11T12:52:29 IST" finished-at="2022-01-11T12:54:06 IST">
+    <test name="ChromeBrowserTest" duration-ms="72405" started-at="2022-01-11T14:39:00 IST" finished-at="2022-01-11T14:40:12 IST">
       <class name="testclass.DemoRunClass">
-        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@2833cc44]" name="OpenBrowser" duration-ms="96961" started-at="2022-01-11T12:52:29 IST" finished-at="2022-01-11T12:54:06 IST">
+        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@2833cc44]" name="OpenBrowser" duration-ms="72337" started-at="2022-01-11T14:39:00 IST" finished-at="2022-01-11T14:40:12 IST">
           <params>
             <param index="0">
               <value>
@@ -20,9 +20,9 @@
         </test-method> <!-- OpenBrowser -->
       </class> <!-- testclass.DemoRunClass -->
     </test> <!-- ChromeBrowserTest -->
-    <test name="FirefoxBrowserTest" duration-ms="134926" started-at="2022-01-11T12:54:06 IST" finished-at="2022-01-11T12:56:21 IST">
+    <test name="FirefoxBrowserTest" duration-ms="93740" started-at="2022-01-11T14:40:13 IST" finished-at="2022-01-11T14:41:46 IST">
       <class name="testclass.DemoRunClass">
-        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@6b9651f3]" name="OpenBrowser" duration-ms="134924" started-at="2022-01-11T12:54:06 IST" finished-at="2022-01-11T12:56:21 IST">
+        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@6b9651f3]" name="OpenBrowser" duration-ms="93739" started-at="2022-01-11T14:40:13 IST" finished-at="2022-01-11T14:41:46 IST">
           <params>
             <param index="0">
               <value>
@@ -35,9 +35,9 @@
         </test-method> <!-- OpenBrowser -->
       </class> <!-- testclass.DemoRunClass -->
     </test> <!-- FirefoxBrowserTest -->
-    <test name="EdgeBrowserTest" duration-ms="101567" started-at="2022-01-11T12:56:21 IST" finished-at="2022-01-11T12:58:03 IST">
+    <test name="EdgeBrowserTest" duration-ms="67335" started-at="2022-01-11T14:41:46 IST" finished-at="2022-01-11T14:42:54 IST">
       <class name="testclass.DemoRunClass">
-        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@7a9273a8]" name="OpenBrowser" duration-ms="101565" started-at="2022-01-11T12:56:21 IST" finished-at="2022-01-11T12:58:03 IST">
+        <test-method status="PASS" signature="OpenBrowser(java.lang.String)[pri:0, instance:testclass.DemoRunClass@7a9273a8]" name="OpenBrowser" duration-ms="67333" started-at="2022-01-11T14:41:46 IST" finished-at="2022-01-11T14:42:54 IST">
           <params>
             <param index="0">
               <value>
