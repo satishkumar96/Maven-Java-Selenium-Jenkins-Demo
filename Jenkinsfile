@@ -47,10 +47,15 @@ pipeline {
                     reportTitles: ''])
                 }
                 
-
+            }
         }
+
         stage('Email BUILD_STATUS')
         {
+            steps
+            {
+                
+            }
 
             post 
             {
